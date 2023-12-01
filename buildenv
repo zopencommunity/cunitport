@@ -1,7 +1,10 @@
-export ZOPEN_STABLE_URL="https://gitlab.com/cunity/cunit.git"
-export ZOPEN_STABLE_TAG="3.2.7"
-export ZOPEN_STABLE_DEPS="make automake autoconf libtool m4 perl cmake tar"
+# bump: cunit-version /CUNIT_VERSION="(.*)"/ https://gitlab.com/cunity/cunit.git|semver:*
+CUNIT_VERSION="3.2.7"
+
 export ZOPEN_BUILD_LINE="STABLE"
+export ZOPEN_STABLE_URL="https://gitlab.com/cunity/cunit.git"
+export ZOPEN_STABLE_TAG="$CUNIT_VERSION"
+export ZOPEN_STABLE_DEPS="make automake autoconf libtool m4 perl cmake tar"
 export ZOPEN_CATEGORIES="development"
 
 export ZOPEN_BOOTSTRAP_OPTS="\${ZOPEN_INSTALL_DIR}"
@@ -21,7 +24,5 @@ zopen_check_results()
 
 zopen_get_version()
 {
-  # Modify to echo the version of your tool/library
-  # Rather than hardcoding the version, obtain the version by running the tool/library
-  echo "1.0.0"
+  echo "$CUNIT_VERSION"
 }
