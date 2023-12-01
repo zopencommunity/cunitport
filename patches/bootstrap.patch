@@ -1,0 +1,17 @@
+diff --git a/bootstrap b/bootstrap
+index 233ce8d..3cb6f05 100755
+--- a/bootstrap
++++ b/bootstrap
+@@ -1,10 +1,11 @@
++#!/bin/sh
+ INSTALL_HOME=
+ if [ $# -gt 0 ]; then
+ 	INSTALL_HOME=$1
+ 	shift
+ fi
+ 
+-if [ "$INSTALL_HOME"X == "X" ]; then
++if [ "${INSTALL_HOME}X" = "X" ]; then
+ 	INSTALL_HOME=$HOME/CUnitHome
+ fi
+ 
