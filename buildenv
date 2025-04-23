@@ -1,5 +1,5 @@
 # bump: cunit-version /CUNIT_VERSION="(.*)"/ https://gitlab.com/cunity/cunit.git|semver:*
-CUNIT_VERSION="3.2.7"
+CUNIT_VERSION="3.3.1"
 
 export ZOPEN_BUILD_LINE="STABLE"
 export ZOPEN_STABLE_URL="https://gitlab.com/cunity/cunit.git"
